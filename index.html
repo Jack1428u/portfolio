@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portafolio profesional de Estudiante de Ingeniería de Sistemas - Especializado en Arquitectura de Software, Full Stack Development y DevOps" />
+  <meta name="color-scheme" content="dark" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            dark: {
+              bg: '#0a0a0a',
+              surface: '#141414',
+              card: '#1e1e1e',
+              border: '#262626',
+              'border-emphasis': '#404040',
+            },
+            accent: {
+              primary: '#3b82f6',
+              secondary: '#60a5fa',
+              success: '#10b981',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <title>Portfolio - Ingeniero de Sistemas</title>
+</head>
+
+<body class="bg-dark-bg text-gray-50">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
