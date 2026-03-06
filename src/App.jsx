@@ -4,6 +4,7 @@ import AboutSection from './components/sections/AboutSection';
 import ProjectsSection from './components/sections/ProjectsSection';
 import DemosSection from './components/sections/DemosSection';
 import Footer from './components/Footer';
+import CertificateSection from './components/sections/CertificateSection';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <AboutSection />
         <ProjectsSection />
         {/* <DemosSection /> */}
+        <CertificateSection/>
       </main>
       <Footer />
     </div>

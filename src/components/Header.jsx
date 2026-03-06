@@ -26,6 +26,7 @@ function Header() {
         { id: 'projects', label: 'Proyectos' },
         { id: 'demos', label: 'Demos' },
         { id: 'contact', label: 'Contacto' },
+        {id:'certifications',label:'Certificaciones'}
     ];
 
     return (
