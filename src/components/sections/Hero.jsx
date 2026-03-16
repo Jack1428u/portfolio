@@ -9,7 +9,7 @@ function Hero() {
     };
 
     return (
-        <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <section className="relative flex flex-col min-h-screen pt-20 pb-16 px-4">
             {/* Background gradient effect */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-accent-primary/5 rounded-full blur-3xl"></div>
@@ -79,10 +79,27 @@ function Hero() {
                 </div>
             </div>
 
-            {/* Scroll indicator */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            {/* Scroll indicator*/}
+
+            {/* --- Scroll indicator como enlace --- */}
+            <a
+                href="#about"
+                onClick={() => scrollToSection('about')}
+                className="
+        /* Estilos responsivos (Móvil) */
+        relative mt-auto pt-12 pb-4 flex justify-center animate-bounce 
+        
+        /* Estilos Escritorio (md:) */
+        md:absolute md:bottom-8 md:left-1/2 md:-translate-x-1/2 
+        md:mt-0 md:pt-0 md:pb-0
+        
+        /* Interactividad */
+        group outline-none
+    "
+                aria-label="Ir a la sección sobre mí"
+            >
                 <svg
-                    className="w-6 h-6 text-gray-500"
+                    className="w-6 h-6 text-gray-500 group-hover:text-accent-primary transition-colors cursor-pointer"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -94,7 +111,7 @@ function Hero() {
                         d="M19 14l-7 7m0 0l-7-7m7 7V3"
                     />
                 </svg>
-            </div>
+            </a>
         </section>
     );
 }

@@ -25,8 +25,8 @@ function Header() {
         { id: 'about', label: 'Sobre Mí' },
         { id: 'projects', label: 'Proyectos' },
         { id: 'demos', label: 'Demos' },
-        { id: 'contact', label: 'Contacto' },
-        {id:'certifications',label:'Certificaciones'}
+        {id:'certifications',label:'Certificaciones'},
+        { id: 'contact', label: 'Contacto' }
     ];
 
     return (

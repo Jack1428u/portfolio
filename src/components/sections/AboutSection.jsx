@@ -1,5 +1,5 @@
+import { certifications } from '../../data/certifications';
 import Section from '../Section';
-
 function AboutSection() {
     const skills = [
         {
@@ -19,6 +19,13 @@ function AboutSection() {
             items: ['Power BI', 'Excel', 'SQL', 'Python'],
         },
     ];
+    const link = certifications.find(c => c.title === "Full Stack Open").link;
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <Section
@@ -29,15 +36,67 @@ function AboutSection() {
             <div className="max-w-4xl mx-auto">
                 {/* Bio */}
                 <div className="mb-12">
-                    <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                        Soy estudiante de <span className="text-accent-primary font-semibold">Ingeniería de Sistemas de Información</span> con
-                        un enfoque estratégico en arquitectura de software y eficiencia operativa. Mi objetivo es aplicar
-                        capacidades técnicas sólidas para automatizar procesos y optimizar flujos digitales.
-                    </p>
-                    <p className="text-lg text-gray-300 leading-relaxed">
-                        Con experiencia en desarrollo Full Stack (Python, JavaScript, Django, React) y conocimientos en DevOps,
-                        busco generar impacto en entornos dinámicos y de alto rendimiento mediante soluciones escalables y bien estructuradas.
-                    </p>
+                    <div className="flex flex-col gap-6 text-lg text-gray-300 leading-relaxed">
+                        {/* Presentación */}
+                        <p>
+                            Transformo visiones complejas en productos digitales escalables, ya seas un emprendedor con una gran idea o una empresa buscando eficiencia. Como desarrollador <span className="text-accent-primary font-semibold">Full Stack</span> con formación en <span className="text-accent-primary font-semibold">Ingeniería de Sistemas</span>, mi enfoque no es solo programar, sino construir soluciones que impulsen tu crecimiento.
+                        </p>
+
+                        {/* Bloque destacado para la certificación */}
+                        <div className="bg-gray-800/40 p-5 rounded-xl border border-gray-700/50 shadow-sm">
+                            <h3 className="text-white font-semibold flex items-center gap-2 mb-2">
+                                <span className="text-xl">🏆</span> Calidad Certificada por la Universidad de Helsinki
+                            </h3>
+                            <p className="text-base">
+                                <span>Cuento con la certificación{" "}</span>
+                                <a
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-sm text-accent-primary hover:text-accent-secondary transition-smooth"
+                                >
+                                    <span className="text-accent-primary font-bold">Full Stack Open</span>
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                                , un estándar de élite que garantiza que mi código es limpio, seguro y de nivel industrial. Mi especialidad es el stack <span className="text-accent-primary font-semibold">MERN + FastAPI</span>, combinando la flexibilidad de JavaScript con la potencia y velocidad de Python para microservicios.
+                            </p>
+                        </div>
+
+                        {/* Lista de beneficios */}
+                        <div>
+                            <p className="text-accent-primary font-bold text-xl mb-4">
+                                ¿Qué obtienes al trabajar conmigo?
+                            </p>
+                            <ul className="list-disc pl-5 space-y-3 marker:text-accent-primary">
+                                <li>
+                                    <strong className="text-gray-100 font-medium">Resultados, no solo código:</strong> Automatizo tus procesos para reducir costos y errores.
+                                </li>
+                                <li>
+                                    <strong className="text-gray-100 font-medium">Escalabilidad Real:</strong> Arquitecturas diseñadas para crecer junto a tu negocio.
+                                </li>
+                                <li>
+                                    <strong className="text-gray-100 font-medium">Innovación Basada en Datos:</strong> Uso mi conocimiento en ingeniería para darte herramientas que te permitan tomar mejores decisiones.
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Cierre / Call to Action */}
+                        <p className="font-semibold text-white mt-2">
+                            Dejemos de hablar de tecnología y empecemos a construir tu éxito 🚀
+                            <a
+                                href="#contact"
+                                onClick={() => scrollToSection('contact')}
+                                className="inline-flex items-center gap-2 text-sm text-accent-primary hover:text-accent-secondary transition-smooth"
+                            >
+                                <span className="text-accent-primary font-bold">Contactar</span>
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
                 </div>
 
                 {/* Skills Grid */}
