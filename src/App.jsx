@@ -5,7 +5,6 @@ import ProjectsSection from './components/sections/ProjectsSection';
 import DemosSection from './components/sections/DemosSection';
 import Footer from './components/Footer';
 import CertificateSection from './components/sections/CertificateSection';
-import ContactForm from './components/sections/ContactForm';
 
 function App() {
   return (
@@ -16,8 +15,7 @@ function App() {
         <AboutSection />
         <ProjectsSection />
         {/* <DemosSection /> */}
-        <CertificateSection/>
-        <ContactForm/>
+        <CertificateSection />
       </main>
       <Footer />
     </div>
