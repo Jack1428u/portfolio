@@ -5,7 +5,7 @@ import { getBlogBySlug } from '@/services/BlogService';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ReactMarkdown from 'react-markdown';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://jack-utrilla.vercel.app';
 
 /* ─────────────────────────────────────────────────────────
    generateMetadata — Metadata dinámica por slug  // Ahora se usa id

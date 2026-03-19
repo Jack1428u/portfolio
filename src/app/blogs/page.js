@@ -4,7 +4,12 @@ import { getBlogs } from '@/services/BlogService';
 /* ─────────────────────────────────────────────
    METADATA ESTÁTICA — Hub de Contenidos
    50-60 chars title | 140-160 chars description
-───────────────────────────────────────────── */
+
+   ───────────────────────────────────────────── */
+
+//  FUERZA A NEXT.JS A OBTENER DATOS FRESCOS EN CADA VISITA
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Blog de Desarrollo Full Stack | Jack Utrilla',
   description:
@@ -37,7 +42,8 @@ export const metadata = {
    SCHEMA JSON-LD — CollectionPage + Blog
 ───────────────────────────────────────── */
 function BlogListSchema({ blogs }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jack-utrilla.vercel.app';
+  if (!blogs || blogs.length === 0) return null;
 
   const schema = {
     '@context': 'https://schema.org',
