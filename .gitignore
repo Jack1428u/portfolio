@@ -1,4 +1,8 @@
 node_modules/
+.env
+.env.local
+.env.production
+.next/
 # Logs
 logs
 *.log
@@ -25,3 +29,6 @@ dist-ssr
 *.sw?
 
 .vercel
+
+
+documentation/

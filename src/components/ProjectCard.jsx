@@ -1,14 +1,17 @@
+'use client';
+
+// Client Component: la imagen tiene onClick con window.open
 function ProjectCard({ title, description, technologies, image, link, github }) {
     return (
         <div className="card-base p-6 group">
-            {/* Image/Icon Placeholder */}
+            {/* Image */}
             <div className="mb-4 h-48 bg-dark-surface rounded-lg overflow-hidden">
                 {image ? (
                     <img
                         src={image}
                         alt={title}
-                        className="w-full h-full object-cover"
-                        onClick={() => window.open(`${image}`, `${link}`)}
+                        className="w-full h-full object-cover cursor-pointer"
+                        onClick={() => link && window.open(link, '_blank')}
                     />
                 ) : (
                     <div className="w-full h-full flex items-center justify-center">

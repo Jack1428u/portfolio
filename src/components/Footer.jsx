@@ -1,3 +1,7 @@
+'use client';
+
+import { scrollToTop } from '@/lib/scroll';
+
 function Footer() {
     const currentYear = new Date().getFullYear();
 
@@ -31,11 +35,6 @@ function Footer() {
         },
     ];
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    // Función para validar url
     const getValidHref = (url) => {
         if (!url.startsWith('http://') && !url.startsWith('https://') && !url.startsWith('mailto:') && url.includes('@')) {
             return `mailto:${url}`;
@@ -76,7 +75,7 @@ function Footer() {
                     {/* Links Column */}
                     <div className="flex flex-col md:items-end">
                         <button
-                            onClick={scrollToTop}
+                            onClick={() => scrollToTop()}
                             className="inline-flex items-center gap-2 text-gray-400 hover:text-accent-primary transition-smooth mb-6"
                         >
                             <span>Volver arriba</span>
@@ -90,7 +89,7 @@ function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-dark-border text-center md:text-left">
                     <p className="text-gray-500 text-sm">
-                        © {currentYear} Portfolio. Diseñado y desarrollado con React y Tailwind CSS.
+                        © {currentYear} Portfolio. Diseñado y desarrollado con Next.js y Tailwind CSS.
                     </p>
                 </div>
             </div>

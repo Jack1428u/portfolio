@@ -1,3 +1,4 @@
+// Server Component — wrapper de sección reutilizable
 function Section({ id, title, subtitle, children, className = '' }) {
     return (
         <section id={id} className={`section-spacing ${className}`}>

@@ -1,18 +1,12 @@
-function Button({
-    children,
-    variant = 'primary',
-    size = 'md',
-    href,
-    onClick,
-    className = '',
-    ...props
-}) {
-    const baseStyles = 'inline-flex items-center justify-center font-medium transition-smooth rounded-lg focus-ring';
+'use client';
+
+function Button({ variant = 'primary', size = 'md', onClick, children, className = '' }) {
+    const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-smooth focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-dark-bg';
 
     const variants = {
-        primary: 'bg-accent-primary hover:bg-accent-secondary text-white',
-        secondary: 'bg-dark-card hover:bg-dark-surface border border-dark-border-emphasis text-gray-100',
-        outline: 'border-2 border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-white',
+        primary: 'bg-accent-primary text-white hover:bg-accent-secondary',
+        outline: 'border border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-white',
+        ghost: 'text-gray-300 hover:text-accent-primary',
     };
 
     const sizes = {
@@ -21,18 +15,11 @@ function Button({
         lg: 'px-8 py-4 text-lg',
     };
 
-    const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
-
-    if (href) {
-        return (
-            <a href={href} className={classes} {...props}>
-                {children}
-            </a>
-        );
-    }
-
     return (
-        <button onClick={onClick} className={classes} {...props}>
+        <button
+            onClick={onClick}
+            className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+        >
             {children}
         </button>
     );

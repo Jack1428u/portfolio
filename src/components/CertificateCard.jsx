@@ -1,14 +1,17 @@
+'use client';
+
+// Client Component: la imagen tiene onClick con window.open
 function CertificateCard({ title, description, skills, image, link, github }) {
     return (
         <div className="card-base p-6 group">
-            {/* Image/Icon Placeholder */}
+            {/* Image */}
             <div className="mb-4 h-48 bg-dark-surface rounded-lg overflow-hidden">
                 {image ? (
                     <img
                         src={image}
                         alt={title}
-                        className="w-full h-full object-cover"
-                        onClick={() => window.open(`${image}`, `${link}`)}
+                        className="w-full h-full object-cover cursor-pointer"
+                        onClick={() => link && window.open(link, '_blank')}
                     />
                 ) : (
                     <div className="w-full h-full flex items-center justify-center">
@@ -37,19 +40,16 @@ function CertificateCard({ title, description, skills, image, link, github }) {
                 {description}
             </p>
 
-            {/* skills */}
-            <h3 className="text-s    font mb-2">
-                Skills
-            </h3>
+            {/* Skills */}
+            <h4 className="text-sm font-semibold text-gray-300 mb-2">Skills</h4>
             {skills && skills.length > 0 && (
                 <div className="flex flex-wrap gap-2 mb-4">
-
-                    {skills.map((tech, index) => (
+                    {skills.map((skill, index) => (
                         <span
                             key={index}
                             className="px-3 py-1 text-xs font-medium bg-dark-surface text-accent-secondary border border-dark-border-emphasis rounded-full"
                         >
-                            {tech}
+                            {skill}
                         </span>
                     ))}
                 </div>
