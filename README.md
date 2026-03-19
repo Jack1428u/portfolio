@@ -1,16 +1,33 @@
-# React + Vite
+# 🚀 Jack Utrilla | Full Stack Engineering Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **"Stop Dreaming. Start Scaling. Engineering high-performance digital realities."**
 
-Currently, two official plugins are available:
+Este repositorio contiene el código fuente de mi portafolio profesional y blog técnico. Construido desde cero enfocándose en **rendimiento, SEO técnico y arquitectura escalable**, aplicando los rigurosos estándares de certificación de la **Universidad de Helsinki (Full Stack Open)**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-## React Compiler
+---
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## ✨ Características Principales
 
-## Expanding the ESLint configuration
+* ⚡ **Server-Side Rendering (SSR):** Implementado con **Next.js App Router** para tiempos de carga ultrarrápidos y una experiencia de usuario fluida sin hidratación innecesaria.
+* 🔍 **SEO Técnico de Élite:** Metadata dinámica, generación automática de Open Graph, canonicals y schemas `JSON-LD` para un posicionamiento web agresivo.
+* 📝 **Motor de Blog Integrado:** Sistema de gestión de artículos en Markdown consumidos desde una API REST propia (Express/MongoDB) con renderizado seguro vía `react-markdown`.
+* 🎨 **UI/UX Premium:** Diseño minimalista (Dark Mode nativo), componentes inspirados en Shadcn UI y tipografía optimizada con `@tailwindcss/typography`.
+* 🛠️ **Clean Architecture:** Separación estricta de responsabilidades (Capa de Servicios para peticiones con Axios, Server vs Client components).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 💻 Tech Stack
+
+| Frontend | Backend (API) | Herramientas & DevOps |
+| :--- | :--- | :--- |
+| Next.js 15 (App Router) | Node.js & Express | ESLint (Flat Config) |
+| React 19 | MongoDB Atlas | Vercel (Deployment) |
+| Tailwind CSS v3 | Mongoose | Git & GitHub |
+| Axios & React-Markdown | RESTful Architecture | PostCSS |
+
+---
