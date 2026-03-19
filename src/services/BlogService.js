@@ -44,6 +44,7 @@ export async function getBlogs() {
         });
         return Array.isArray(data) ? data : (data?.data ?? []);
     } catch {
+        console.error("❌ Error en getBlogs:", error.response?.data || error.message);
         return [];
     }
 }
