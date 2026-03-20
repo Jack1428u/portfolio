@@ -18,6 +18,7 @@ const blogApi = axios.create({
     headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
+        'x-api-key':process.env.ADMIN_API_KEY || '',
     },
 });
 
@@ -44,7 +45,7 @@ export async function getBlogs() {
         });
         return Array.isArray(data) ? data : (data?.data ?? []);
     } catch {
-        console.error("❌ Error en getBlogs:", error.response?.data || error.message);
+        // console.error("Error en getBlogs:", error.response?.data || error.message); // Si se descomenta agregar catch (error)
         return [];
     }
 }

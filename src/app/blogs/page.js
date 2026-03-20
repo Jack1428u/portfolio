@@ -42,7 +42,7 @@ export const metadata = {
    SCHEMA JSON-LD — CollectionPage + Blog
 ───────────────────────────────────────── */
 function BlogListSchema({ blogs }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jack-utrilla.vercel.app';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://jackutrilla.com';
   if (!blogs || blogs.length === 0) return null;
 
   const schema = {
